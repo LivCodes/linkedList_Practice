@@ -77,3 +77,20 @@ const deleteHead = head => {
   }
 
 // deleteHead(a);
+
+// ***********************************************************************
+// approach to sum the values in the linked list
+
+const sumList = (head) => {
+    // todo
+    const arr = [];
+    let current = head;
+    if(current === null) return 0;
+    while(current != null){
+      arr.push(current.val)
+      current = current.next;
+    }
+    return arr.reduce((acc, cv) => acc + cv);
+  };
+
+sumList(a); // will return 'ABCD' but if data were #'s will add them
