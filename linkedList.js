@@ -65,3 +65,15 @@ const fillValues = (head, values) => {
 }
 
 // linkedListValuesRecursive(a);
+
+// ************************************************************************
+// approach to delete the head node
+
+const deleteHead = head => {
+    if (head == null) {
+      return null;
+    }
+    return head.next;
+  }
+
+// deleteHead(a);
