@@ -35,3 +35,33 @@ const printLinkedListRecursive = (head) => {
 }
 
 // printLinkedListRecursive(a);
+
+// ********************************************************************
+
+//iterative approach to returning the linked list's values in an array
+const linkedListValues = head => {
+    const arr = [];
+    let current = head;
+    while(current != null){
+      arr.push(current.val);
+      current = current.next;
+    }
+    return arr;
+}
+
+// linkedListValues(a);
+
+//recursive approach to returning the linked list's values in an array
+const linkedListValuesRecursive = head => {
+    const values = [];
+    fillValues(head, values);
+    return values;
+}
+
+const fillValues = (head, values) => {
+    if(head === null) return;
+    values.push(head.val);
+    fillValues(head.next, values);
+}
+
+// linkedListValuesRecursive(a);
