@@ -15,4 +15,23 @@ a.next = b;
 b.next = c;
 c.next = d;
 
+// A -> B -> C -> D
 
+// iterative approach to printing each node value
+const printLinkedList = (head) => {
+    let current = head;
+    while(current != null) {
+        console.log(current.val);
+        current = current.next;
+    } 
+};
+
+// printLinkedList(a);
+// recursive approach to printing each node value
+const printLinkedListRecursive = (head) => {
+    if(head === null) return;
+    console.log(head.val);
+    printLinkedListRecursive(head.next);
+}
+
+// printLinkedListRecursive(a);
