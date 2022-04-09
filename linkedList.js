@@ -118,4 +118,22 @@ const linkedListFindRecursive = (head, target) => {
   
   // since the last line in linkedListFindRecursive returns a boolean placing a return infront will pass it up
   
-  linkedListFindRecursive(a, "C")
+//   linkedListFindRecursive(a, "C")
+
+// ***********************************************************************
+// find last index occurrance of given value
+
+function lastIndexOf(head, value) {
+    let index = 0;
+    let val = -1;
+    let current = head;
+  
+    while(current != null) {
+      if(current.data === value) {val = index};
+      index++;
+      current = current.next;
+    }
+    return val;
+  }
+
+  lastIndexOf(a, "C");
