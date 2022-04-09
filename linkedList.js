@@ -94,3 +94,28 @@ const sumList = (head) => {
   };
 
 sumList(a); // will return 'ABCD' but if data were #'s will add them
+
+
+// ***********************************************************************
+// finding a target value 
+const linkedListFind = (head, target) => {
+  let current = head;
+  
+  while(current != null) {
+      if(current.val === target) return true;
+    current = current.next;
+  }
+  return false;
+};
+// linkedListFind(a, "C")
+
+// recursively finding a target value 
+const linkedListFindRecursive = (head, target) => {
+    if(head === null) {return false};
+    if(head.val === target) {return true};
+    return linkedListFindRecursive(head.next, target);
+  }
+  
+  // since the last line in linkedListFindRecursive returns a boolean placing a return infront will pass it up
+  
+  linkedListFindRecursive(a, "C")
