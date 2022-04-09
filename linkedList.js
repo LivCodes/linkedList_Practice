@@ -5,7 +5,11 @@ class Node {
         this.next = null;
     }
 }
-
+class LinkedList {
+    constructor() {
+      this.head = null;
+    }
+}
 const a = new Node('A');
 const b = new Node('B');
 const c = new Node('C');
@@ -136,4 +140,22 @@ function lastIndexOf(head, value) {
     return val;
   }
 
-  lastIndexOf(a, "C");
+  // lastIndexOf(a, "C");
+
+  // *********************************************************************
+
+  // insert node at the beginning of the list
+
+  
+  LinkedList.prototype.insertAtBeginning = (data) => {
+    const newNode = new Node(data);
+    newNode.next = this.head;
+    this.head = newNode;
+    console.log(this.head)
+    return this.head;
+  }
+
+  LinkedList.prototype.insertAtBeginning("E");
+
+  this.head.next = a
+  console.log(this.head)
